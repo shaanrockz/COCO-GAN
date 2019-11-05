@@ -1,0 +1,44 @@
+data_params:
+  # dataset options: "celeba", "lsun", "mnist",
+  dataset: "lsun"
+  c_dim: 3
+  full_image_size: [64, 64] 
+  macro_patch_size: [32, 32] 
+  micro_patch_size: [16, 16] 
+  num_train_samples: 2983042 
+  num_test_samples: 50000
+  coordinate_system: "euclidean"
+  
+train_params:
+  epochs: inf # No need to specify, usually longer better, and eventually saturates
+  batch_size: 128
+  G_update_period: 1
+  D_update_period: 1
+  Q_update_period: 0
+  beta1: 0.0
+  beta2: 0.999
+  glr: 0.0001
+  dlr: 0.0004
+  qlr: 0.0001
+
+loss_params:
+  gp_lambda: 10
+  coord_loss_w: 100
+  code_loss_w: 0
+
+model_params:
+  z_dim: 128
+  spatial_dim: 2
+  g_extra_layers: 0
+  d_extra_layers: 0
+  ngf_base: 64
+  ndf_base: 64
+  aux_dim: 128
+
+log_params:
+  exp_name: "LSUN_64x64_N2M2S32"
+  log_dir: "./logs/"
+
+  # Use inf to disable
+  img_step: 1000 # Consumes quite much disk space
+  dump_img_step: 2000 # Consumes LOTS of disk space
