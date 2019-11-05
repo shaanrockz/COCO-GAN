@@ -3,6 +3,8 @@
 Implementation of Paper 'COCO-GAN: Generation by Parts via Conditional Coordinating'
 This code is PyTorch converted version of author's TensorFlow code present here : https://github.com/hubert0527/COCO-GAN
 
+(The structure of the code is kept very similar to the author's repository, refer https://hubert0527.github.io/COCO-GAN/ for detailed descriptions)
+
 # Prerequisite
 
 ```python
@@ -14,13 +16,12 @@ Matplotlib
 
 # Train the Network
 
-To train the network, e.g. with coco-cgan, you can execute the following command:
+To train the network, e.g. with coco-gan, you can execute the following command:
 
 ```python
 python main.py 
 ```
 Config file can be edited according to the need !
-
 
 # Dataset
 "celeb_data" can be downloaded from this link : https://drive.google.com/open?id=1PceubRgNbDhTExEFSfHuB4fKsOibDKQy
